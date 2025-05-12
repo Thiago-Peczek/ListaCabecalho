@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <stdlib.h>
 #include "lista.h"
 
 Lista* criarLista() {
@@ -103,7 +104,7 @@ int contarElementos(Lista* lista) {
 
 //percorre a lista até encontrar o ultimo elemento, assim que encontrar coloca o ponteiro dele para o 
 //primeiro elemento após o cabeçalho da lista 2, libera o cabeçalho e a lista 2 após isso
-void concatenarListas(Lista* l1, Lista* l2) {
+void concatenarLista(Lista* l1, Lista* l2) {
     No* atual = l1->cabeca;
 
     while (atual->prox != NULL) {
@@ -165,7 +166,7 @@ int obterMenor(Lista* lista) {
 //verifica o primeiro nó, compara esse valor nó por nó, caso ache um valor igual modifica o ponteiro 
 //do anterior para ser o próximo do valor que estamos, após passar por toda a lista retorna para o segundo valor
 //percorre novamente a lista removendo os valores repetidos. Depois vai para o terceiro, quarto e assim por diante 
-void removerDuplicados(Lista* lista) {
+void removerDuplicatas(Lista* lista) {
     No* atual = lista->cabeca->prox;
 
     while (atual != NULL) {
